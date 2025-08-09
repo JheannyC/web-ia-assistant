@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Lexend:wght@100..900&family=Onest:wght@100..900&display=swap"
+        rel="stylesheet">
     <title>Assistente de IA</title>
 </head>
+
 <body>
-    
+
+    <h1 class="descricao">Chat GPTinho</h1>
+
+    <div class="send-box">
+        <form action="" method="post" onsubmit="return false;">
+            <label class="send-input">
+                <span class="label-text">Insira sua API Key:</span>
+                <input class="input" id="input-api-key" autocomplete="off" placeholder="Insira sua API KEY"
+                    type="password" />
+            </label>
+            <button class="btn-send" id="api-key" type="submit" aria-label="Enviar API Key">
+                Enviar API Key</button>
+        </form>
+    </div>
+
+    <div class="card-spacing"></div>
+
+    <div class="send-box">
+        <form id="pergunta-form" action="" method="post" onsubmit="return false;">
+            <label class="send-input">
+                <span class="label-text">Digite sua pergunta:</span>
+                <input class="input-question" id="input-api-question" autocomplete="off"
+                    placeholder="Insira sua pergunta" type="text" />
+            </label>
+            <button class="btn-send" id="send" type="submit" aria-label="enviar">
+                Enviar</button>
+        </form>
+    </div>
+
+    <div class="card-spacing"></div>
+
+    <div id="resposta-box" class="send-box" style="display: none;">
+        <form action="" method="post" onsubmit="return false;">
+            <label class="answer">
+                <span class="label-text">Resposta:</span>
+                <input class="input-answer" id="input-api-answer" autocomplete="off" placeholder="Resposta" type="text"
+                    readonly />
+            </label>
+
+        </form>
+    </div>
+
 </body>
+
 </html>
+<script src="script.js"></script>
