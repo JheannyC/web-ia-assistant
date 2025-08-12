@@ -18,7 +18,7 @@
     <h1 class="descricao">Chat Gemininho</h1>
 
     <div class="send-box">
-        <form action="" method="post" onsubmit="return false;">
+        <form id="form-key" action="" method="post" onsubmit="return false;">
             <label class="send-input">
                 <span class="label-text">Insira sua API Key:</span>
                 <input class="input" id="input-api-key" autocomplete="off" placeholder="Insira sua API KEY"
@@ -32,7 +32,7 @@
     <div class="card-spacing"></div>
 
     <div class="send-box">
-        <form id="pergunta-form" action="" method="post" onsubmit="return false;">
+        <form id="form-question" action="" method="post" onsubmit="return false;">
             <label class="send-input">
                 <span class="label-text">Digite sua pergunta:</span>
                 <input class="input-question" id="input-api-question" autocomplete="off"
@@ -45,11 +45,11 @@
 
     <div class="card-spacing"></div>
 
-    <div id="resposta-box" class="send-box" style="display: none;">
+    <div id="box-answer" class="send-box" style="display: none;">
         <form action="" method="post" onsubmit="return false;">
             <label class="answer">
                 <span class="label-text">Resposta:</span>
-                <textarea class="input-answer" id="input-api-answer" autocomplete="off" placeholder="Resposta" readonly
+                <textarea class="txtarea-answer" id="txtarea-api-answer" autocomplete="off" placeholder="Resposta" readonly
                     rows="5"></textarea>
             </label>
         </form>
