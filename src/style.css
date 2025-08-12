@@ -70,9 +70,19 @@ form {
   transform: translateY(-1px);
 }
 
-.send-input input::placeholder {
+.send-input input::placeholder,
+.input-answer::placeholder {
   color: var(--muted);
-    margin-bottom: 50px;
+  margin-bottom: 50px;
+}
+
+.input-answer {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  resize: vertical;
 }
 
 .btn-send {
