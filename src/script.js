@@ -11,6 +11,7 @@ form2.addEventListener('submit', async (e) => {
   const apiKeyInput = document.getElementById('input-api-key').value.trim();
 
   if (!apiKeyInput) {
+    apiKeyInput.value="Vazio..."
     alert('Por favor, insira a chave da API');
     return;
   }
@@ -49,7 +50,6 @@ form.addEventListener('submit', async (e) => {
 
   const pergunta = document.getElementById('input-api-question').value.trim();
   if (!pergunta) {
-    pergunta.value = "Vazio"
     alert('Campo de pergunta vazio.')
     return;
   }
