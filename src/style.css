@@ -46,6 +46,7 @@ body {
 form {
   display: flex;
   width: 100%;
+  gap: 12px;
 }
 
 .send {
@@ -64,15 +65,20 @@ form {
   transition: box-shadow var(--transition), border-color var(--transition),
     transform var(--transition);
 }
+
+.send-input {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .send-input:focus-within {
   border-color: color-mix(in srgb, var(--primary) 70%, blue 10%);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
   transform: translateY(-1px);
 }
 
 .send-input input::placeholder,
 .input-answer::placeholder {
-  color: var(--muted);
   margin-bottom: 50px;
 }
 
@@ -108,6 +114,7 @@ form {
   width: auto;
   height: 40px;
   margin-top: 4%;
+  flex-shrink: 0;
 }
 
 .btn-send:hover {
@@ -139,6 +146,7 @@ form {
   border: 0;
   display: block;
   gap: 15px;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
 }
 
 .descricao {
@@ -152,29 +160,28 @@ form {
 }
 
 .card-spacing {
-  height: 24px; /* espaço entre os cards */
+  height: 24px;
 }
 
-.input-question {
-  width: calc(590px - 60px);
-  height: 20px;
-  padding: 20px;
+.input-box {
+  width: 100%;
+  height: 40px;
+  padding: 10px 14px;
   border-radius: 8px;
-  border: 0
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  outline: none;
 }
 
 .input-answer {
-  width: calc(710px - 30px);
-  height: 20px;
-  padding: 20px;
+  width: 100%;
+  height: 40px;
+  padding: 10px 14px;
   border-radius: 8px;
-  border: 0;
-  cursor: crosshair;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  outline: none;
 }
 
 .label-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 10px; 
+  margin-bottom: 6px;
+  font-weight: 600;
 }

@@ -1,6 +1,6 @@
 const form = document.getElementById('form-question');
 const form2 = document.getElementById('form-key');
-const respostaBox = document.getElementById('resposta-box');
+const respostaBox = document.getElementById('box-answer');
 const respostaInput = document.getElementById('txtarea-api-answer');
 const url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 let userApiKey = '';
@@ -11,7 +11,6 @@ form2.addEventListener('submit', async (e) => {
   const apiKeyInput = document.getElementById('input-api-key').value.trim();
 
   if (!apiKeyInput) {
-    apiKeyInput.value="Vazio..."
     alert('Por favor, insira a chave da API');
     return;
   }
@@ -47,7 +46,7 @@ form2.addEventListener('submit', async (e) => {
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-
+ console.log('submit disparou');
   const pergunta = document.getElementById('input-api-question').value.trim();
   if (!pergunta) {
     alert('Campo de pergunta vazio.')
