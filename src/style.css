@@ -40,12 +40,13 @@ body {
   display: flex;
   gap: 12px;
   align-items: center;
-  border:solid var(--primary);
+  border: solid var(--primary);
 }
 
 form {
   display: flex;
   width: 100%;
+  gap: 12px;
 }
 
 .send {
@@ -56,23 +57,26 @@ form {
   padding: 5px 12px;
   border-radius: 10px;
   border: 1px solid rgba(15, 23, 42, 0.06);
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.9),
-    rgba(250, 250, 250, 0.9)
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.9),
+      rgba(250, 250, 250, 0.9));
   transition: box-shadow var(--transition), border-color var(--transition),
     transform var(--transition);
 }
+
+.send-input {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 .send-input:focus-within {
   border-color: color-mix(in srgb, var(--primary) 70%, blue 10%);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
   transform: translateY(-1px);
 }
 
 .send-input input::placeholder,
 .input-answer::placeholder {
-  color: var(--muted);
   margin-bottom: 50px;
 }
 
@@ -87,17 +91,16 @@ form {
 
 .btn-send {
   margin: 0 5%;
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   padding: 10px 16px;
   border-radius: 10px;
   border: 0;
-  background: linear-gradient(
-    180deg,
-    var(--primary),
-    color-mix(in srgb, var(--primary) 80%, black 10%)
-  );
+  background: linear-gradient(180deg,
+      var(--primary),
+      color-mix(in srgb, var(--primary) 80%, black 10%));
   color: var(--primary-contrast);
   font-weight: 600;
   cursor: pointer;
@@ -108,6 +111,7 @@ form {
   width: auto;
   height: 40px;
   margin-top: 4%;
+  flex-shrink: 0;
 }
 
 .btn-send:hover {
@@ -139,6 +143,7 @@ form {
   border: 0;
   display: block;
   gap: 15px;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.12);
 }
 
 .descricao {
@@ -152,29 +157,47 @@ form {
 }
 
 .card-spacing {
-  height: 24px; /* espaço entre os cards */
+  height: 24px;
 }
 
-.input-question {
-  width: calc(590px - 60px);
-  height: 20px;
-  padding: 20px;
+.input-box {
+  width: 100%;
+  height: 40px;
+  padding: 10px 14px;
   border-radius: 8px;
-  border: 0
+  border: 1px solid rgba(15, 23, 42, 0.06);
 }
 
-.input-answer {
-  width: calc(710px - 30px);
-  height: 20px;
-  padding: 20px;
+.answer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.txtarea-answer {
+  width: 100%;
+  height: 200px;
+  padding: 10px 14px;
   border-radius: 8px;
-  border: 0;
-  cursor: crosshair;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  outline: none;
+  box-sizing: border-box;
+  resize: none;
+  flex: 1;
 }
 
 .label-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-copy svg {
+  display: block;
+}
+
+.btn-send:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
