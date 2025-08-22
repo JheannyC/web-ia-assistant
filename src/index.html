@@ -20,12 +20,26 @@
     <div class="send-box">
         <form id="form-key" action="" method="post" onsubmit="return false;">
             <label class="send-input">
-                <span class="label-text">Insira sua API Key:</span>
+                <span class="label-text" id="label-api-key">Insira sua API Key:</span>
                 <input class="input-box" id="input-api-key" autocomplete="off" placeholder="Insira sua API KEY"
                     type="password" />
             </label>
             <button class="btn-send" id="btn-api-key" type="submit" aria-label="Enviar API Key">
-                Enviar API Key</button>
+                Enviar API Key
+                <svg id="btn-send" class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 26 26">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M16 12H4m12 0-4 4m4-4-4-4m3-4h2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-2" />
+                </svg>
+                <svg id="btn-loading" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 50 50" fill="none">
+                    <circle cx="25" cy="25" r="20" stroke="white" stroke-width="4" stroke-linecap="round"
+                        stroke-dasharray="31.4 31.4" transform="rotate(90 25 25)">
+                        <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s"
+                            repeatCount="indefinite" />
+                    </circle>
+                </svg>
+            </button>
         </form>
     </div>
 
@@ -35,11 +49,17 @@
         <form id="form-question" action="" method="post" onsubmit="return false;">
             <label class="send-input">
                 <span class="label-text">Digite sua pergunta:</span>
-                <input class="input-box" id="input-api-question" autocomplete="off"
-                    placeholder="Insira sua pergunta" type="text" />
+                <input class="input-box" id="input-api-question" autocomplete="off" placeholder="Insira sua pergunta"
+                    type="text" />
             </label>
             <button class="btn-send" id="btn-send" type="submit" aria-label="enviar">
-                Enviar</button>
+                Enviar
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="none" viewBox="0 0 26 26">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
+                        d="M16 12H4m12 0-4 4m4-4-4-4m3-4h2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-2" />
+                </svg>
+            </button>
         </form>
     </div>
 
@@ -48,9 +68,17 @@
     <div id="box-answer" class="send-box" style="display: none;">
         <form action="" method="post" onsubmit="return false;">
             <label class="answer">
-                <span class="label-text">Resposta:</span>
-                <textarea class="txtarea-answer" id="txtarea-api-answer" autocomplete="off" placeholder="Resposta" readonly
-                    rows="5"></textarea>
+                <span class="label-text">Resposta: </span>
+                <textarea class="txtarea-answer" id="txtarea-api-answer" autocomplete="off" placeholder="Resposta"
+                    copyable rows="5"></textarea>
+                <button class="btn-send btn-copy" id="btn-copy" type="button" aria-label="Copiar">
+                    Copiar resposta
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 26 26">
+                        <path stroke="currentColor" stroke-linejoin="round" stroke-width="1.8" style="display: block;"
+                            d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z" />
+                    </svg>
+                </button>
             </label>
         </form>
     </div>
